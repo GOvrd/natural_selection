@@ -133,6 +133,8 @@
     <ClInclude Include="Bot.h" />
     <ClInclude Include="CCP.h" />
     <ClInclude Include="Field.h" />
+    <ClInclude Include="Life_func.h" />
+    <ClInclude Include="State.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -1,4 +1,5 @@
-#pragma once
+#ifndef FIELD_H_
+#define FIELD_H_
 
 #include <iostream>
 #include <ctime>
@@ -53,3 +54,4 @@ void Field<CellType>::print() {
 		std::cout << "\n";
 	}
 }
+#endif //!FIELD_H_

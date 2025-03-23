@@ -1,15 +1,17 @@
-#pragma once
+#ifndef CCP_H_
+#define CCP_H_
+
 #include <iostream>
+
 //class Current Command Pointer
 class CCP {
 private:
-	int _pointer = 1;
-	const int _max;
+	uint8_t _pointer = 1;
+	const uint8_t _max;
 public:
-	CCP(int MaxSize = 64) : _max(MaxSize) {};
-
+	CCP(uint8_t MaxSize) : _max(MaxSize) {};
 	CCP operator++(int);
-	CCP& operator+=(int shift);
+	CCP& operator+=(uint8_t);
 };
 
 CCP CCP::operator++(int) {
@@ -21,7 +23,7 @@ CCP CCP::operator++(int) {
 	return copy;
 };
 
-CCP& CCP::operator+=(int shift)
+CCP& CCP::operator+=(uint8_t shift)
 {
 	if (_pointer != _max) {
 		_pointer += shift;
@@ -29,3 +31,5 @@ CCP& CCP::operator+=(int shift)
 	else _pointer = 1;
 	return  *this;
 }
+
+#endif // !CCP_H_
